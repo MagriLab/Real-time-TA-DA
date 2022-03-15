@@ -1,4 +1,4 @@
-# DA-ESN
+# Real-time-TA-DA
 
 Repository containing the codes and data used for the paper [...]
 
