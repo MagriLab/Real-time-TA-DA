@@ -13,8 +13,8 @@ function [Sim] = setup_sim(varargin)
             Qbar    =   0;    % 100000 Heat release rate (W) - check how T2 changes
         elseif contains(model, 'high')
             u1      =   10;       % Inlet velocity (m/s) - LOM 0.1
-            R_out   =   -0.999;       % Reflection coefficient in open BC
-            R_in    =   -0.999;       % Reflection coefficient in open BC
+            R_out   =   -0.999;   % Reflection coefficient in open BC
+            R_in    =   -0.999;   % Reflection coefficient in open BC
             Qbar    =   20000;    % 100000 Heat release rate (W) - check how T2 changes
         else
             error('define high or low order model')
@@ -71,7 +71,7 @@ function Sim  = set_forcing_measurement(Sim)
     Forcing.Speaker_Downstream  =   'OFF';
     % Define measurement parameters
     Measurement.Fs      =   10000; 	% Sampling frequency (Hz)    
-    Measurement.Time    =   50;     % Length of the measurements(s)
+    Measurement.Time    =   5;     % Length of the measurements(s)
     Measurement.PMT     =   'ON';   % Photomultiplier:    
     Measurement.Mic     =   'ON';   % Differential Microphones:
     Measurement.HWA     =   'OFF';	% Hot wire anemometry:
