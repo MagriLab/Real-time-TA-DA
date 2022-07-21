@@ -1,7 +1,7 @@
 clc; addpath(genpath(pwd)); plot_settings
 % ----------------------------------------------------------------------- %
 
-choose_fig  =   24;      % Select any of the figures in the paper
+choose_fig  =   12;      % Select any of the figures in the paper
 
 % ----------------------------------------------------------------------- %
 if choose_fig <= 22

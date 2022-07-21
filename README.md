@@ -1,6 +1,6 @@
 # Real-time-TA-DA
 
-Repository containing the codes and data used for the paper [...]
+Repository containing the codes and data used for creating the figures in 
 
   Part I: twin experiments in a Rijke tube with data assimilation.
 

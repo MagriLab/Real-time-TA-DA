@@ -34,7 +34,7 @@ function P = fn_extract_Sim_properties(Sim, P)
     % =================================================================== %
     P.t_min     =   0;                      % Minimum integration time  [s]                          
     P.t_max     =   Sim.Measurement.Time;	% Maximun integration time  [s]                    
-    P.Fs_mic    =   Sim.Measurement.Fs;     % Measurement timestep  [s]
+    P.Fs_mic    =   Sim.Measurement.Fs;     % Measurement timestep      [s]
     P.dt        =   Sim.dt;                 % Integration timestep      [s]
     % =================================================================== %
     P.x_mic     =   Sim.Measurement.Mic_Pos + P.x_f; % Mics location    [m]

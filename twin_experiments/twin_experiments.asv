@@ -40,18 +40,29 @@ if any(choose_fig == timeseries_figs)
     for i = 1:length(ALL_S)
         nexttile;	Figures(ALL_S{i},ALL_V{i},ALL_P{i},'zoom',[]);
     end
-
-    plot_settings(13)
+    %%
+    plot_settings(12)
     figure('Units','normalized','OuterPosition',[0 0.06 0.8 0.8]);
     tiledlayout(4,2,'Padding','compact','TileSpacing','compact')
+
 
     for i = 1:length(ALL_S)
         S = ALL_S{i};
         V = ALL_V{i};
-        idx = 20000;
-        p_cell = {V.p_xf_true(end-idx:end), V.p_xf(end-idx:end),V.p_xf_comp(end-idx:end)};
-        t_cell = {S.t_true(end-idx:end), S.t(end-idx:end), S.t(end-idx:end)};
-        portraits(p_cell, t_cell,2*(i-1));
+        
+        
+        p_cell = {V.p_xf_true, V.p_xf,V.p_xf_comp};
+        t_cell = {S.t_true, S.t, S.t_comp};
+        
+        colors     	=   {' #1a5276 ',' #a3e4d7 ',' #f39c12 '};
+        figure;
+        for j = 1:length(p_cell)
+            portraits(p_cell{j}, t_cell{j}, colors{j}, i);
+        end
+        
+        
+        
+        
     end
 
 

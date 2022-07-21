@@ -1,6 +1,6 @@
 function [ALL_S, ALL_V, ALL_P] = DA_paper_data(choose_fig)
-    % This function creates the datasets required to replicate figures
-    % 8-22 in Nóvoa, A. & Magri, L. (2021). Real-time thermoacoustic 
+    % This function creates the datasets required to replicate the
+    % figures in Nóvoa, A. & Magri, L. (2021). Real-time thermoacoustic 
     % data assimilation.
     % Input: 
     %   - choose_fig: figure number
@@ -230,6 +230,7 @@ function [ALL_S, ALL_V, ALL_P] = DA_paper_data(choose_fig)
                 ALL_P{ai} 	=   param;  
             end
         else
+%             VECS     	=   obtain_sol_vecs(SOLS,param);
             ALL_S{1}    =   SOLS;
             ALL_V{1}    =   [];
             ALL_P{1}	=   param;
